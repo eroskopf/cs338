@@ -2,5 +2,6 @@
 Emma Roskopf's repo for computer security
 
 ## Here you will find...
-### Topic
- - items
+### misc
+ - contains miscellaneous files
+ - has _status.txt_ which gives my current Kali Status 
