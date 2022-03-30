@@ -1,5 +1,8 @@
 Emma Roskopf
 
-Kali: I have started the VMWare installation process but I haven't gotten the key yet so I can't download it. I'm going to use the Olin 310 Lab Computers
-tomorrow because I have class before CS338 so I won't have time to figure out VMWare tomorrow morning. In the future though, I plan to use my personal 
-machine (a Windows laptop) because it will be easier for me in the long run. 
+Kali: I have Kali and VMWare set up on my personal laptop (Windows). I would like to complain though because it took me around 2 hours and I was very confused,
+The initial steps had no explanation and I had a hard time downloading VMWare because the instructions didn't match my display (I got to the buying screen by 
+accident and then had to completely redo it again). I wasn't expecting it to take nearly this long. I don't know if I'm just particularly bad at this or if 
+my computer is just very slow, but a warning on how long this would take would have been nice because I kept having to leave to do other things which meant 
+I was more confused when I came back. If I had known it would take this long I would've scheduled it better, but I assumed since downloads are usually 
+easy that it wouldn't take more than 15 minutes to get everything up and running. 
