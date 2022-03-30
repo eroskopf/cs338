@@ -1,0 +1,5 @@
+Emma Roskopf
+
+Kali: I have started the VMWare installation process but I haven't gotten the key yet so I can't download it. I'm going to use the Olin 310 Lab Computers
+tomorrow because I have class before CS338 so I won't have time to figure out VMWare tomorrow morning. In the future though, I plan to use my personal 
+machine because it will be easier in the long run. 
