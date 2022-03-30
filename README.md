@@ -1,5 +1,5 @@
 # cs338
-Emma Roskopf's repo for computer security
+Emma Roskopf's repo for Computer Security, CS338
 
 ## Here you will find...
 ### misc
