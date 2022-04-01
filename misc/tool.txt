@@ -1,14 +1,22 @@
 Emma Roskopf 
 
-What's your computer's IP address for its current Internet connection? (0-point bonus: how can you tell the difference between your Ethernet IP 
+1) What's your computer's IP address for its current Internet connection? (0-point bonus: how can you tell the difference between your Ethernet IP 
 and your wireless IP if you have both connections active?)
+ - ifconfig
+ - my IP address is 172.23.77.112
 
 How can you determine the IP address associated with a given host name?
+ - ping [hostname]
+ - in the parentheses is the ip address
+ - https://www.whatismyip.com/how-to-find-the-ip-address-of-a-website/#1-ping-command
 
 How can you determine the host name(s) associated with a given IP address?
+ - nslookup [IP address]
+ - https://stackoverflow.com/questions/3621682/reverse-ip-find-domain-names-on-ip-address#:~:text=You%20can%20use%20nslookup%20on,in%2Daddr.arpa%20domain.&text=this%20will%20ask%203.2.21.123,one%20defined%20for%20reverse%20DNS).
 
 How can you copy a file from one computer to another? Or more to the point, if you create a file on the Kali virtual machine and you want to put it 
 someplace where you can save it, like your your account on mantis.mathcs.carleton.edu, how do you go about it from the Kali command-line interface?
+ - 
 
 How can you tell whether there's a process listening on a given port (e.g. port 80 or port 22) on a given host?
 
