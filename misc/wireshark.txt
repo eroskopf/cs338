@@ -1,0 +1,39 @@
+Emma Roskopf
+
+===== DAYTIME =====
+1) Parts of the TCP 3-way handshake by listing the frame summaries of the relevant frames
+
+
+2) What port number does the client (i.e. nc on your Kali computer) use for this interaction? And why does the client need a port?
+
+
+3) What frame contains the actual date and time? (Show the frame summary as in question 1 above.)
+
+
+4) What is the full content (not counting the Ethernet, IP, and TCP headers) of the frame? What do each of the pieces of the frame content represent? 
+(Most of the frame content is things like the year, month, day, hour, etc., but there's a little more info, too.)
+
+
+5) What does [SYN] mean?
+Sync, syncronize, so that both the client and the server are on the same page and know what is happening. 
+
+6) What does [ACK] mean?
+Acknowedge, the client or the server acknowledges that it received the information or the request.
+
+7) What does [FIN] mean?
+Finished, or finishing up. It's when the client and the server are confirming that they're both done with the interaction.
+
+8) Which entity (the nc client or the daytime server) initiated the closing of the TCP connection? How can you tell?
+The daytime server initiated the closing of the connection because it's the first entity to respond with a [FIN]
+
+===== HTTP =====
+1) How many TCP connections were opened?
+
+
+2) Can you tell where my homepage (index.html) was requested? (If not, why not? If so, include frame summaries and/or other info that supports your answer.) 
+
+
+3) Can you tell where my photograph (jeff_square_head.jpg) was requested? (If not, why not? If so, 
+include frame summaries and/or other info that supports your answer.)
+
+===== QUESTIONS =====
