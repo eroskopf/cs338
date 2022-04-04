@@ -1,39 +1,58 @@
-Emma Roskopf
+Emma Roskopf & Lily Haas
 
 ===== DAYTIME =====
 1) Parts of the TCP 3-way handshake by listing the frame summaries of the relevant frames
-
+1 172.16.164.128 129.6.15.28 TCP 46964--> 13 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 SACK_PERM=1 TSval=471351760 TSecr=0 WS=128
+2 129.6.15.28 172.16.164.128 TCP 13 --> 46964 [SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1460
+3 172.16.164.128 129.6.15.28 TCP 46964--> 13 [ACK] Seq=1 Ack=1 Win=64240 Len=0
 
 2) What port number does the client (i.e. nc on your Kali computer) use for this interaction? And why does the client need a port?
-
+The client is using port 46964. The client needs a port in case multiple things are going on at once, this is just a random port
+so the information knows where to go.
 
 3) What frame contains the actual date and time? (Show the frame summary as in question 1 above.)
-
+4 129.6.15.28 172.16.164.128 DAYTIME DAYTIME Response
 
 4) What is the full content (not counting the Ethernet, IP, and TCP headers) of the frame? What do each of the pieces of the frame content represent? 
 (Most of the frame content is things like the year, month, day, hour, etc., but there's a little more info, too.)
+\n59672 22-04-04 00:35:10 50 0 0 550.0 UTC(NIST) * \n
+The \n are the new line indicators. The next number is the Modified Julian Date. The next number is the Gregorian calendar date, the one after it is 
+the time. The "50" means that it is currently Daylight Savings Time. The first zero means there are no leap seconds happening tonight. The second 
+zero means that the server is healthy. The UTC(NIST) is giving the time zone and saying it's from the National Institute of Standards and Technology.
+The asterisk means the date came in on time. 
 
+Source: https://www.nist.gov/system/files/documents/calibrations/sp250-59.pdf
 
 5) What does [SYN] mean?
-Sync, syncronize, so that both the client and the server are on the same page and know what is happening. 
+Sync, syncronize, so that both the client and the server are on the same page and know what is happening. Part of the TCP handshake.
 
 6) What does [ACK] mean?
 Acknowedge, the client or the server acknowledges that it received the information or the request.
 
 7) What does [FIN] mean?
-Finished, or finishing up. It's when the client and the server are confirming that they're both done with the interaction.
+Finished, or finishing up. It's when the client and the server are confirming that they're both done with the interaction and are closing the connection.
 
 8) Which entity (the nc client or the daytime server) initiated the closing of the TCP connection? How can you tell?
-The daytime server initiated the closing of the connection because it's the first entity to respond with a [FIN]
+The nc client initiated the closing of the connection because the first frame to respond with a [FIN] message comes from 172.16.164.128 which is the client's
+IP address. This makes sense because it comes right after the DAYTIME response, and so the nc client is acknowledging the data that came in and is closing the 
+connection to the server because it got the information it requested. 
 
 ===== HTTP =====
 1) How many TCP connections were opened?
-
+2 connections. To me it seems like the computer sent two TCP handshakes at the beginning, both of which are acknowledged by the server,
 
 2) Can you tell where my homepage (index.html) was requested? (If not, why not? If so, include frame summaries and/or other info that supports your answer.) 
-
+7 172.16.164.128 45.79.89.123 HTTP GET /index.html HTTP/1.1
+It's pretty self explanatory that the client(172.16.164.128) is requesting to GET /index.html from the server(45.79.89.123). 
 
 3) Can you tell where my photograph (jeff_square_head.jpg) was requested? (If not, why not? If so, 
 include frame summaries and/or other info that supports your answer.)
+11 172.16.164.128 45.79.89.123 HTTP GET /jeff_square_head.jpg HTTP/1.1
+Once again this request is coming from the client and going to the server, and it is asking to GET the /jeff_square_head.jpg.
 
 ===== QUESTIONS =====
+1) What does Seq, Win, Len, etc mean? 
+  - my instinct is Seq is 'sequence' but then in the end TCP frames the Seq jumps up several hundred
+  - does Len have to do with Length? They 'feel' associated because the frames with long Lengths have a Len that isn't zero
+2) Why are there two simultaneous TCP handshakes happening? 
+3) What is PDU and why is it being reassembled?
