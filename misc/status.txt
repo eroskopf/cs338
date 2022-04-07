@@ -1,6 +1,8 @@
 Emma Roskopf
 
-Kali: I have Kali and VMWare set up on my personal laptop (Windows). I would like to complain though because it took me around 2 hours and I was very confused,
+Update 4/7/22: I bricked Windows on my laptop (unrelated incident) and now Kali and everything is gone. I am very unwilling to go back through the download process (I'm very bad at downloading Kali, see below) and will just be using the Olin 310 machines for everything Kali related. 
+
+Kali: I have Kali and VMWare set up on my personal laptop (Windows). I would like to complain though because it took me around 2 hours and I was very confused.
 The initial steps had no explanation and I had a hard time downloading VMWare because the instructions didn't match my display (I got to the buying screen by 
 accident and then had to completely redo it again). I wasn't expecting it to take nearly this long. I don't know if I'm just particularly bad at this or if 
 my computer is just very slow, but a warning on how long this would take would have been nice because I kept having to leave to do other things which meant 
